@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Juan Pérez, Desarrollador Web Full Stack especializado en... ">
     <meta name="keywords" content="Desarrollador Web, Full Stack, JavaScript, React, Node.js">
-    <title>Mi Currículum Online</title>
+    <title>Documento</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=TU_ID_DE_SEGUIMIENTO"></script>
-    <script src="js/analytics.js"></script>
-
+    <script src="js/analytics.js" defer></script>
+    <script src="js/script.js" defer></script>
 
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <h1>Juan Pérez</h1>
-            <p>Desarrollador Web Full Stack | juanperez@example.com</p>
+            <div class="theme-switch">
+                <button id="toggle-theme">Modo Oscuro/Claro</button>
+            </div>
+            <div class="perfil-foto">
+                <img src="ruta/a/tu/foto.jpg" alt="Juan Pérez">
+            </div>
+            <h1>Jose Luis Luzuriaga Alanis</h1>
+            <p>Desarrollador de software | luzuriagaalanis@gmail.com</p>
         </div>
     </header>
     <main>
@@ -91,22 +97,39 @@
             <h2>Contacto</h2>
             <p>¿Interesado en trabajar juntos? ¡Me encantaría escuchar sobre tu proyecto!</p>
             <form action="URL_para_enviar_formulario" method="POST">
-                <input type="text" name="nombre" placeholder="Tu Nombre" required>
-                <input type="email" name="email" placeholder="Tu Email" required>
-                <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea>
+                <label for="nombre">Tu Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required>
+                
+                <label for="email">Tu Email:</label>
+                <input type="email" id="email" name="email" placeholder="Tu Email" required>
+                
+                <label for="mensaje">Tu Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Tu Mensaje" required></textarea>
+                
                 <button type="submit">Enviar Mensaje</button>
             </form>
         </section>
+        <section id="intereses" class="container">
+            <h2>Intereses</h2>
+            <p>Además de mi pasión por la programación y el desarrollo web, disfruto del senderismo, la fotografía y el ajedrez.</p>
+        </section>
     </main>
     <footer class="container footer-content">
-        <p>Conéctate conmigo en redes sociales:</p>
-        
-        <a href="https://www.linkedin.com/in/tu-usuario" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-        
-        <a href="https://github.com/tu-usuario" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-       
-        <!-- Incluir más redes según sea necesario -->
-        © 2024 Juan Pérez. Todos los derechos reservados.
+        <nav>
+            <ul>
+                <li><a href="#perfil">Perfil</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#intereses">Intereses</a></li>
+            </ul>
+        </nav>
+        <p>luzuriagaalanis@gmail.com | <a href="https://www.linkedin.com/in/tu-usuario" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> | <a href="https://github.com/tu-usuario" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
+        © 2024 Jose Luis Luzuriaga Alanis. Todos los derechos reservados.
     </footer>
 </body>
 </html>

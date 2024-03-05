@@ -1,3 +1,4 @@
+/* Reset básico para asegurar consistencia */
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +6,10 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
+    line-height: 1.6;
     background-color: #f4f4f4;
-    padding: 20px;
-    margin: 0;
 }
 
 .container {
@@ -19,107 +18,174 @@ body {
     padding: 20px;
 }
 
-header, footer {
+header {
     background: #005691;
-    color: #ffffff;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
-    padding: 20px 0;
+    position: relative;
 }
 
-header h1, footer {
-    margin: 0;
-    color: #ffcc00;
+.perfil-foto img {
+    border-radius: 50%;
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
 }
 
-header p {
-    margin: 10px 0 0;
-}
-
-section {
-    background: #ffffff;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-h2 {
-    color: #005691;
-    border-bottom: 2px solid #ffcc00;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+h1, h2 {
+    margin: 10px 0;
 }
 
 p {
-    text-align: justify;
+    margin: 10px 0;
 }
 
-/* Animaciones */
-@keyframes slideInFromLeft {
-    from { transform: translateX(-100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes slideInFromRight {
-    from { transform: translateX(100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-.left-enter {
-    animation: slideInFromLeft 1s ease-out;
-}
-
-.right-enter {
-    animation: slideInFromRight 1s ease-out;
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 0 10px;
-    }
-
-    header, footer {
-        text-align: center;
-    }
-}
-
-.lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox-content {
-    background: white;
+/* Estilos para las secciones principales */
+section {
+    background: #fff;
+    margin: 20px 0;
+    margin-bottom: 20px;
     padding: 20px;
-    border-radius: 8px;
-    position: relative;
-    max-width: 80%;
-    max-height: 80%;
-    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.lightbox img {
-    width: 100%;
-    max-width: 600px;
-    display: block;
-    margin: 0 auto;
+/* Estilos para la navegación en el footer */
+footer nav ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 20px;
 }
 
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    color: #333;
+footer nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer nav ul li a {
     text-decoration: none;
+    color: #333;
 }
 
-.proyecto-item:hover {
+footer p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Iconos de redes sociales */
+.fa-linkedin, .fa-github {
+    color: #005691;
+}
+
+/* Estilos para el formulario */
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    width: 100%;
+    background: #005691;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background: #003f5f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .perfil-foto img {
+        display: none;
+    }
+    
+    header {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+/* Contenedor del interruptor del tema */
+.theme-switch {
+    position: fixed; /* O puedes usar 'absolute' dependiendo de la estructura de tu página */
+    top: 20px; /* Ajusta según sea necesario */
+    right: 20px; /* Ajusta según sea necesario */
+    z-index: 1000; /* Asegúrate de que el botón esté por encima de otros elementos */
+}
+
+/* Estilización del botón */
+#toggle-theme {
+    cursor: pointer;
+    font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
+    padding: 10px 20px;
+    background-color: #4baff1; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
+}
+
+/* Estilos para el botón en el modo oscuro */
+.dark-theme #toggle-theme {
+    background-color: #333; /* Fondo más oscuro para el botón en modo oscuro */
+    color: #ffffff; /* Mantén el texto claro para contraste */
+}
+
+/* Efecto al pasar el mouse */
+#toggle-theme:hover {
+    background-color: #000000; /* Color de fondo al pasar el mouse */
+    color: #ffffff; /* Mantén el texto claro para contraste */
+
+}
+
+/* Efecto al pasar el mouse en el modo oscuro */
+.dark-theme #toggle-theme:hover {
+    background-color: #ffffff; /* Fondo más claro al pasar el mouse en modo oscuro */
+    color: #000000; /* Mantén el texto claro para contraste */
+
+}
+
+/* Estilos para el Modo Oscuro */
+.dark-theme {
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto claro */
+}
+
+.dark-theme .container {
+    background-color: #242424; /* Fondo más oscuro para el contenedor en modo oscuro */
+}
+
+/* Asegúrate de especificar los estilos para todos los elementos que deben cambiar */
+.dark-theme a, .dark-theme p {
+    color: #bbbbbb; /* Ajustar los colores para una mejor legibilidad en modo oscuro */
+}
+
+/* Ejemplo para botones o enlaces */
+.dark-theme button, .dark-theme a {
+    background-color: #333; /* Fondo más oscuro para botones/enlaces */
+    color: #ffffff; /* Texto claro para botones/enlaces */
+}
+
+/* Ejemplo para botones o enlaces */
+.dark-theme body{
+    background-color: #000000; /* Fondo más oscuro para botones/enlaces */
 }
