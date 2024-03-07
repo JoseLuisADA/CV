@@ -49,14 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
             this.parentElement.parentElement.style.display = 'none';
         }
     });
-
-    // Contenido de analytics.js
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'TU_ID_DE_SEGUIMIENTO');
-
 });
 
 function initializeThemeToggle() {

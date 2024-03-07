@@ -50,6 +50,8 @@ li{
     max-width: 100%;
     margin-bottom: 10px;
     margin-top: 10px;
+    margin-left: 6vh;
+    margin-right: 6vh;
     padding: 20px;
     transition: background-color 0.8s ease, color 0.1s ease;
     border-radius: 25px;
@@ -220,20 +222,20 @@ form button:hover {
 }
 
 #nombre{
-    padding: 2vh;
     background-color: rgb(255, 255, 255);
     color: black;
     border-radius: 40px;
+    font-size: 5vh;
     transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
     transition: color 0.3s ease; /* Suaviza el cambio de color de fondo */
 }
 
 #cargoYCorreo{
     font-weight: bold;
-    padding: 3px;
     background-color: rgb(255, 255, 255);
     color: black;
     border-radius: 40px;
+    font-size: 2.3vh;
     transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
     transition: color 0.3s ease; /* Suaviza el cambio de color de fondo */
 
@@ -247,7 +249,7 @@ form button:hover {
 
 .dark-theme #nombre{
     background-color: black;
-    padding: 2vh;
+    font-size: 5vh;
     color: white;
     border-radius: 40px;
     transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
@@ -257,7 +259,6 @@ form button:hover {
 .dark-theme #cargoYCorreo{
     background-color: black;
     border-radius: 40px;
-    padding: 3px;
     font-size: 2.3vh;
     color: white;
     transition: background-color 0.6s ease; /* Suaviza el cambio de color de fondo */
