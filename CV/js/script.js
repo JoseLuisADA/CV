@@ -68,11 +68,11 @@ function initializeThemeToggle() {
             if(document.body.classList.contains('dark-theme')) {
                 localStorage.setItem('theme', 'dark');
                 document.querySelector('header').style.transition = 'background 0.9s ease';
-                document.querySelector('header').style.background = 'url("resources/images/noche.jpg") center/cover';
+                document.querySelector('header').style.background = 'url("CV/resources/images/noche.jpg") center/cover';
             } else {
                 localStorage.removeItem('theme');
                 document.querySelector('header').style.transition = 'background 0.9s ease';
-                document.querySelector('header').style.background = 'url("resources/images/dia.webp") center/cover';
+                document.querySelector('header').style.background = 'url("CV/resources/images/dia.webp") center/cover';
             }
         });
     }
@@ -81,10 +81,10 @@ function initializeThemeToggle() {
     if(localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-theme');
         document.querySelector('header').style.transition = 'background 0.9s ease';
-        document.querySelector('header').style.background = 'url("resources/images/noche.jpg") center/cover';
+        document.querySelector('header').style.background = 'url("CV/resources/images/noche.jpg") center/cover';
     } else {
         document.querySelector('header').style.transition = 'background 0.9s ease';
-        document.querySelector('header').style.background = 'url("resources/images/dia.webp") center/cover';
+        document.querySelector('header').style.background = 'url("CV/resources/images/dia.webp") center/cover';
     }
 }
 
