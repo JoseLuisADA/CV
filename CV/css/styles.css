@@ -5,17 +5,63 @@
     box-sizing: border-box;
 }
 
+/* Animación para el hover en las secciones */
+section:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    transition: transform 0.3s ease;
+}
+
+
+/* Animación para el hover en los elementos de la lista del footer */
+footer nav ul li:hover {
+    transform: translateY(-5px); /* Desplaza ligeramente hacia arriba al pasar el mouse */
+    transition: transform 0.3s ease;
+}
+
+/* Animación para el hover en los enlaces del footer */
+footer nav ul li a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+/* Animación para el hover en los botones del formulario */
+form button:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Agrega una sombra alrededor del botón al pasar el mouse */
+}
+
+/* Animación para el hover en los elementos de la barra de navegación del header */
+header nav ul li:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    transition: transform 0.3s ease;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     line-height: 1.6;
     background-color: #f4f4f4;
+    transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+li{
+    margin-left: 30px;
 }
 
 .container {
     max-width: 1100px;
     margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
     padding: 20px;
+    transition: background-color 0.8s ease, color 0.1s ease;
+    border-radius: 25px;
+}
+
+.header-content{
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    transition: background-color 0.8s ease, color 0.1s ease;
+    border-radius: 25px;
 }
 
 header {
@@ -27,17 +73,33 @@ header {
     position: relative;
 }
 
+.perfil-foto {
+    position: relative; /* Cambia el posicionamiento relativo del contenedor */
+    display: inline-block; /* Ajusta el contenedor como un bloque en línea */
+    margin-right: 20px; /* Ajusta el margen derecho para separar la imagen del texto */
+}
+
 .perfil-foto img {
     border-radius: 50%;
-    width: 120px;
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
+    max-width: 500%; /* Ancho máximo de la imagen */
+    width: 20vh;
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    display: block; /* Ajusta la imagen como un bloque */
+    margin: auto;
+}
+
+@media (min-width: 768px) and (max-height: 1176px) {
+    .perfil-foto img {
+        max-width: 20vh;
+    }
 }
 
 h1, h2 {
     margin: 10px 0;
+}
+
+h2 {
+    text-decoration: underline;
 }
 
 p {
@@ -47,10 +109,7 @@ p {
 /* Estilos para las secciones principales */
 section {
     background: #fff;
-    margin: 20px 0;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 0px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
@@ -75,6 +134,7 @@ footer p {
     text-align: center;
     margin-top: 20px;
 }
+
 
 /* Iconos de redes sociales */
 .fa-linkedin, .fa-github {
@@ -114,10 +174,6 @@ form button:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .perfil-foto img {
-        display: none;
-    }
-    
     header {
         text-align: center;
         padding: 20px;
@@ -137,7 +193,7 @@ form button:hover {
     cursor: pointer;
     font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
     padding: 10px 20px;
-    background-color: #4baff1; /* Color de fondo */
+    background-color: #000000; /* Color de fondo */
     color: #ffffff; /* Color del texto */
     border: none;
     border-radius: 5px; /* Bordes redondeados */
@@ -146,21 +202,41 @@ form button:hover {
 
 /* Estilos para el botón en el modo oscuro */
 .dark-theme #toggle-theme {
-    background-color: #333; /* Fondo más oscuro para el botón en modo oscuro */
-    color: #ffffff; /* Mantén el texto claro para contraste */
+    background-color: #ffffff; /* Fondo más oscuro para el botón en modo oscuro */
+    color: #000000; /* Mantén el texto claro para contraste */
 }
 
 /* Efecto al pasar el mouse */
 #toggle-theme:hover {
-    background-color: #000000; /* Color de fondo al pasar el mouse */
-    color: #ffffff; /* Mantén el texto claro para contraste */
+    background-color: #ffffff; /* Color de fondo al pasar el mouse */
+    color: #000000; /* Mantén el texto claro para contraste */
 
 }
 
 /* Efecto al pasar el mouse en el modo oscuro */
 .dark-theme #toggle-theme:hover {
-    background-color: #ffffff; /* Fondo más claro al pasar el mouse en modo oscuro */
-    color: #000000; /* Mantén el texto claro para contraste */
+    background-color: #000000; /* Fondo más claro al pasar el mouse en modo oscuro */
+    color: #ffffff; /* Mantén el texto claro para contraste */
+
+}
+
+#nombre{
+    padding: 2vh;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 40px;
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
+    transition: color 0.3s ease; /* Suaviza el cambio de color de fondo */
+}
+
+#cargoYCorreo{
+    font-weight: bold;
+    padding: 3px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 40px;
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
+    transition: color 0.3s ease; /* Suaviza el cambio de color de fondo */
 
 }
 
@@ -169,6 +245,26 @@ form button:hover {
     background-color: #121212; /* Fondo oscuro */
     color: #ffffff; /* Texto claro */
 }
+
+.dark-theme #nombre{
+    background-color: black;
+    padding: 1vh;
+    color: white;
+    border-radius: 40px;
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
+    transition: color 0.3s ease; /* Suaviza el cambio de color de fondo */
+}
+
+.dark-theme #cargoYCorreo{
+    background-color: black;
+    border-radius: 40px;
+    padding: 3px;
+    font-size: 2.3vh;
+    color: white;
+    transition: background-color 0.6s ease; /* Suaviza el cambio de color de fondo */
+    transition: color 0.6s ease; /* Suaviza el cambio de color de fondo */
+}
+
 
 .dark-theme .container {
     background-color: #242424; /* Fondo más oscuro para el contenedor en modo oscuro */
@@ -180,7 +276,7 @@ form button:hover {
 }
 
 /* Ejemplo para botones o enlaces */
-.dark-theme button, .dark-theme a {
+.dark-theme button, .dark-theme {
     background-color: #333; /* Fondo más oscuro para botones/enlaces */
     color: #ffffff; /* Texto claro para botones/enlaces */
 }
@@ -189,3 +285,11 @@ form button:hover {
 .dark-theme body{
     background-color: #000000; /* Fondo más oscuro para botones/enlaces */
 }
+
+/* Ejemplo header */
+.dark-theme header{
+    background-color: #000000; /* Fondo más oscuro para botones/enlaces */
+    transition: background-color 0.8s ease, color 0.1s ease;
+
+}
+

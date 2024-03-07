@@ -14,21 +14,23 @@
 </head>
 <body>
     <header>
-        <div class="container header-content">
+        <div class="header-content">
             <div class="theme-switch">
                 <button id="toggle-theme">Modo Oscuro/Claro</button>
             </div>
             <div class="perfil-foto">
-                <img src="ruta/a/tu/foto.jpg" alt="Juan Pérez">
+                <img src="resources/images/foto.jpeg" alt="Juan Pérez">
             </div>
-            <h1>Jose Luis Luzuriaga Alanis</h1>
-            <p>Desarrollador de software | luzuriagaalanis@gmail.com</p>
+            <h1 id="nombre">Jose Luis Luzuriaga Alanis</h1>
+            <p id="cargoYCorreo">Desarrollador de software | luzuriagaalanis@gmail.com</p>
         </div>
     </header>
     <main>
+
+        <!-- Mini perfil -->
         <section id="perfil" class="container right-enter">
             <h2>Perfil Profesional</h2>
-            <p>Desarrollador de software con muchas ganas de aprender y contribuir a nuestro sector</p>
+            <p>Desarrollador de software con muchas ganas de aprender y contribuir a nuestro sector. No estoy de momento más inclinado al frontend o el backend, me gustan ambas cosas.</p>
         </section>
         <section id="experiencia" class="container left-enter">
             <h2>Experiencia Profesional</h2>
@@ -47,92 +49,51 @@
                 <p class="educacion-fecha">09/2023 - Actualmente</p>
                 <p>ADA ITS</p>
             </div>
+            <hr/>
             <div class="educacion-item">
                 <h3>HTML5, CSS, Java, Javascript</h3>
                 <p class="educacion-fecha">11/2020 - 06/2021</p>
                 <p>Udemy.com</p>
             </div>
+            <hr/>
             <div class="educacion-item">
                 <h3>Grado Medio de Técnico en Actividades Comerciales</h3>
                 <p class="educacion-fecha">2017 - 2019</p>
                 <p>I.E.S La Mola, Alicante</p>
             </div>
-        </section>
-        <section id="habilidades" class="container left-enter">
-            <h2>Habilidades Técnicas</h2>
-            <!-- Lista de habilidades aquí -->
+            <hr/>
         </section>
         
-        <!-- Portafolio de Proyectos -->
-        <section id="proyectos" class="container right-enter">
-            <h2>Portafolio de Proyectos</h2>
-            <div class="proyectos-grid">
-                <!-- Ejemplo de proyecto con Lightbox -->
-                <a href="#proyecto1" class="proyecto-item">
-                    <img src="ruta/a/imagen/del/proyecto.png" alt="Descripción del Proyecto">
-                    <div class="proyecto-info">
-                        <h3>Nombre del Proyecto</h3>
-                        <p>Descripción breve del proyecto...</p>
-                    </div>
-                </a>
-                <!-- Lightbox Contenido -->
-                <div id="proyecto1" class="lightbox">
-                    <div class="lightbox-content">
-                        <a href="#" class="close">&times;</a>
-                        <img src="ruta/a/imagen/del/proyecto.png" alt="Descripción del Proyecto">
-                        <h3>Nombre del Proyecto</h3>
-                        <p>Descripción detallada del proyecto...</p>
-                        <a href="URL_del_proyecto" target="_blank">Ver Proyecto</a>
-                    </div>
-                </div>
-                <!-- Repetir para más proyectos -->
-            </div>
+        <!-- Actitudes Destacadas -->
+        <section id="actitudes" class="container left-enter">
+            <h2>Actitudes destacadas</h2>
+            <ul>
+                <li>Proactividad</li>
+                <li>Trabajar bajo presión</li>
+                <li>Buen trabajo en equipo</li>
+            </ul>
         </section>
 
         <!-- Testimonios -->
         <section id="testimonios" class="container left-enter">
             <h2>Testimonios</h2>
-            <div class="testimonio-item">
-                <p>"Juan ha sido un colaborador excepcional en nuestros proyectos, aportando soluciones innovadoras..." - Nombre, Cargo</p>
-            </div>
-            <!-- Añadir más testimonios según sea necesario -->
-        </section>
-
-        <!-- Blog -->
-        <section id="blog" class="container">
-            <h2>Últimas Entradas del Blog</h2>
-            <div class="blog-entradas">
-                <article class="entrada-blog">
-                    <h3><a href="blog/entrada1.html">Título de la Entrada 1</a></h3>
-                    <p class="entrada-fecha">Fecha de Publicación</p>
-                    <p>Resumen de la entrada del blog...</p>
-                </article>
-                <!-- Repite para más entradas de blog -->
+            <div class="testimonio">
+                <p>Me gustaría saber tu testimonio sobre mí, contáctame para aparecer aquí</p>
             </div>
         </section>
 
-        <section id="intereses" class="container">
-            <h2>Intereses</h2>
-            <p>Además de mi pasión por la programación y el desarrollo web, disfruto del senderismo, la fotografía y el ajedrez.</p>
+        
+        <!-- Ubicación -->
+        <section id="mapa" class="container left-enter">
+            <h2>Mi Ubicación</h2>
+            <div style="width: 100%"><iframe width="auto" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=Avenida%20Fernando%20Corral%20Corach%C3%A1n+(Your%20Business%20Name)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/sport-gps/">hiking gps</a></iframe></div>
         </section>
-
+        
         <!-- Formulario de Contacto -->
         <section id="contacto" class="container">
-            <h2>Contacto</h2>
-            <p>¿Interesado en trabajar juntos? ¡Me encantaría escuchar sobre tu proyecto!</p>
-            <form action="URL_para_enviar_formulario" method="POST">
-                <label for="nombre">Tu Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required>
-                
-                <label for="email">Tu Email:</label>
-                <input type="email" id="email" name="email" placeholder="Tu Email" required>
-                
-                <label for="mensaje">Tu Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Tu Mensaje" required></textarea>
-                
-                <button type="submit">Enviar Mensaje</button>
-            </form>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfp8gU7pfekE6ZPhJuaFxzVjEHuItNn4H7HescuwFMS7_dgjA/viewform?embedded=true" width="auto" height="1000px" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
         </section>
+        
     </main>
     <footer class="container footer-content">
         <nav>
@@ -140,16 +101,13 @@
                 <li><a href="#perfil">Perfil</a></li>
                 <li><a href="#experiencia">Experiencia</a></li>
                 <li><a href="#educacion">Educación</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#actitudes">Actitudes</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
-                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#intereses">Intereses</a></li>
             </ul>
         </nav>
-        <p>luzuriagaalanis@gmail.com | <a href="https://www.linkedin.com/in/tu-usuario" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> | <a href="https://github.com/tu-usuario" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
-        © 2024 Jose Luis Luzuriaga Alanis. Todos los derechos reservados.
+        <p>luzuriagaalanis@gmail.com | <a href="https://www.linkedin.com/in/luzuriagaalanis/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> | <a href="https://github.com/JoseLuisADA" target="_blank"><i class="fab fa-github"></i>GitHub</a></p>
+        <p>© 2024 Jose Luis Luzuriaga Alanis. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
