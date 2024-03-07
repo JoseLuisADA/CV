@@ -247,7 +247,7 @@ form button:hover {
 
 .dark-theme #nombre{
     background-color: black;
-    padding: 1vh;
+    padding: 2vh;
     color: white;
     border-radius: 40px;
     transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
