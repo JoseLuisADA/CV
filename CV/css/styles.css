@@ -105,6 +105,15 @@ header {
     }
 }
 
+#nombre{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 40px;
+    font-size: 140%;
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
+    transition: color 0.3s ease; /* Suaviza el cambio de color de fondo */
+}
+
 h1, h2 {
     margin: 10px 0;
 }
@@ -207,8 +216,8 @@ form button:hover {
 /* Estilización del botón */
 #toggle-theme {
     cursor: pointer;
-    font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
-    padding: 10px 20px;
+    font-size: 70%; 
+    padding: 10% 20%;
     background-color: #000000; /* Color de fondo */
     color: #ffffff; /* Color del texto */
     border: none;
@@ -219,38 +228,31 @@ form button:hover {
 /* Estilos para el botón en el modo oscuro */
 .dark-theme #toggle-theme {
     background-color: #ffffff; /* Fondo más oscuro para el botón en modo oscuro */
-    color: #000000; /* Mantén el texto claro para contraste */
+    color: #000000; /* Mantiene el texto claro para contraste */
 }
 
 /* Efecto al pasar el mouse */
 #toggle-theme:hover {
     background-color: #ffffff; /* Color de fondo al pasar el mouse */
-    color: #000000; /* Mantén el texto claro para contraste */
+    color: #000000; /* Mantiene el texto claro para contraste */
 
 }
 
 /* Efecto al pasar el mouse en el modo oscuro */
 .dark-theme #toggle-theme:hover {
     background-color: #000000; /* Fondo más claro al pasar el mouse en modo oscuro */
-    color: #ffffff; /* Mantén el texto claro para contraste */
+    color: #ffffff; /* Mantiene el texto claro para contraste */
 
 }
 
-#nombre{
-    background-color: rgb(255, 255, 255);
-    color: black;
-    border-radius: 40px;
-    font-size: 5vh;
-    transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
-    transition: color 0.3s ease; /* Suaviza el cambio de color de fondo */
-}
+
 
 #cargoYCorreo{
     font-weight: bold;
     background-color: rgb(255, 255, 255);
     color: black;
     border-radius: 40px;
-    font-size: 2.3vh;
+    font-size: 100%;
     transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
     transition: color 0.3s ease; /* Suaviza el cambio de color de fondo */
 
@@ -265,7 +267,7 @@ form button:hover {
 
 .dark-theme #nombre{
     background-color: black;
-    font-size: 5vh;
+    font-size: 140%;
     color: white;
     border-radius: 40px;
     transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
@@ -275,7 +277,7 @@ form button:hover {
 .dark-theme #cargoYCorreo{
     background-color: black;
     border-radius: 40px;
-    font-size: 2.3vh;
+    font-size: 100%;
     color: white;
     transition: background-color 0.6s ease; /* Suaviza el cambio de color de fondo */
     transition: color 0.6s ease; /* Suaviza el cambio de color de fondo */
