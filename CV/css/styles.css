@@ -11,9 +11,6 @@ section:hover {
     transition: transform 0.3s ease;
 }
 
-.footer-content{
-}
-
 /* Animación para el hover en los elementos de la lista del footer */
 footer nav ul li:hover {
     transform: translateY(-5px); /* Desplaza ligeramente hacia arriba al pasar el mouse */
@@ -119,17 +116,17 @@ h1, h2 {
 }
 
 h3 {
-    font-size: 2.5vh;
+    font-size: 100%;
 }
 
 h2 {
     text-decoration: underline;
-    font-size: 3.5vh;
+    font-size: 120%;
 }
 
 p {
     margin: 10px 0;
-    font-size: 2.5vh;
+    font-size: 100%;
 }
 
 /* Estilos para las secciones principales */
